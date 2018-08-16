@@ -122,7 +122,6 @@ public class Samples {
 
          // The iteration is now trained. Make it the default project endpoint 
          iteration.withIsDefault(true);
-         trainings.updateIteration(project.id(), iteration.id(), iteration);
          System.out.println("Done!\n"); 
 
     	
@@ -143,7 +142,7 @@ public class Samples {
 
          // Make a prediction against the new project 
      	 System.out.println("Making a prediction:"); 
-         ImagePrediction result = endpoint.predictions().predictImage().withProjectId(project.id()).withImageData(testImage).execute();
+         ImagePrediction result = endpoint.predictions().predictImage().withProjectId(project.id()).withImageData(testImage).withIterationId(iteration.id()).execute();
 
          // Loop over each prediction and write out the results 
          for(com.microsoft.azure.cognitiveservices.vision.customvision.prediction.models.Prediction c : result.predictions()) 
