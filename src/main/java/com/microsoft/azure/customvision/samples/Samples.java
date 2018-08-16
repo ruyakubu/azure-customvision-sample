@@ -141,7 +141,7 @@ public class Samples {
 
 
          // Make a prediction against the new project 
-     	 System.out.println("Making a prediction:"); 
+     	 System.out.println("Making a prediction..."); 
          ImagePrediction result = endpoint.predictions().predictImage().withProjectId(project.id()).withImageData(testImage).withIterationId(iteration.id()).execute();
 
          // Loop over each prediction and write out the results 
