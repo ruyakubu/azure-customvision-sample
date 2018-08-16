@@ -6,6 +6,7 @@ This project uses the Custom Vision Service in Java. This Java application shows
 # Steps to run application
 - Git project
 - Replace the training key and prediction key in the code w/ your keys (https://customvision.ai)
-- Create 2 folders w/ your images (note: this example only uses 2 image paths.  You can use more than 2 in your case)
+- Create 2 folders w/ your images (note: this example only uses 2 image paths.  But...you can use more than 2 in your case)
+- This program will recursively read all the images from your local folders
 
 
